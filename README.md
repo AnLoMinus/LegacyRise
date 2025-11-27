@@ -1,5 +1,9 @@
 # 🔥 **Hustle For Your Last Name – Yaakobov Legacy**
 
+<img width="1024" height="1024" alt="Cosmic Gold Majesty" src="https://github.com/user-attachments/assets/451752c6-2eaf-4241-84a6-c7ba2e3e9022" />
+
+<img width="1024" height="1024" alt="Yaakobov Logo with Golden Crown" src="https://github.com/user-attachments/assets/1fc2e3aa-4357-4618-b732-f1f3cbdf2f66" />
+
 <img width="1024" height="1024" alt="Logo Design with Regal Touch" src="https://github.com/user-attachments/assets/ce8687c3-43dc-49e4-ad98-c538b4feb60a" />
 
 ### **(LegacyRise – LR)**
