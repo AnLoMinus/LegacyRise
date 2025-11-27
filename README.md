@@ -1,5 +1,7 @@
 # 🔥 **Hustle For Your Last Name – Yaakobov Legacy**
 
+<img width="1536" height="1024" alt="Cosmic Majesty of Yaakobov" src="https://github.com/user-attachments/assets/d67192a8-d7f2-444b-8b06-4405c84dc312" />
+
 <img width="1024" height="1024" alt="Cosmic Crown of Yaakobov" src="https://github.com/user-attachments/assets/851c4929-5981-4744-9d9d-4c41f5cf8152" />
 
 <img width="1024" height="1024" alt="Cosmic Gold Majesty" src="https://github.com/user-attachments/assets/451752c6-2eaf-4241-84a6-c7ba2e3e9022" />
