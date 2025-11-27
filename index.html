@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LegacyRise – Yaakobov | Hustle For Your Last Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LegacyRise – LR | Hustle for your last name. Put respect on the Yaakobov legacy. Be a curse breaker." />
+  <style>
+    :root {
+      --bg-dark: #05040a;
+      --gold: #f2c455;
+      --gold-soft: #ffc973;
+      --accent-blue: #33c3ff;
+      --accent-red: #ff4b4b;
+      --text-main: #f5f5f5;
+      --text-muted: #b3b3c9;
+      --card-bg: rgba(8, 8, 20, 0.88);
+      --border-soft: rgba(255, 255, 255, 0.1);
+      --shadow-strong: 0 0 40px rgba(0, 0, 0, 0.9);
+      --radius-xl: 24px;
+      --transition-fast: 0.25s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 215, 128, 0.12) 0, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(92, 186, 255, 0.14) 0, transparent 55%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+    .page-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 4, 10, 0.96),
+        rgba(5, 4, 10, 0.75),
+        transparent
+      );
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #f2c455 32%, #b47a23 65%, #000 100%);
+      box-shadow:
+        0 0 12px rgba(255, 204, 102, 0.75),
+        0 0 40px rgba(255, 204, 102, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: #160c00;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .nav-title-main {
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .nav-title-sub {
+      font-size: 13px;
+      color: var(--gold-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .nav-link {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      color: var(--gold-soft);
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      border-radius: 999px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255, 204, 128, 0.7);
+      color: #1a1002;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(120deg, #f2c455, #ff9a3c, #ffe28a);
+      background-size: 220% 220%;
+      box-shadow:
+        0 0 14px rgba(255, 204, 102, 0.6),
+        0 0 46px rgba(255, 204, 102, 0.32);
+      animation: glowPulse 5s ease-in-out infinite;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px) scale(1.01);
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 14px rgba(255, 204, 102, 0.55), 0 0 36px rgba(255, 204, 102, 0.28); }
+      50% { box-shadow: 0 0 24px rgba(255, 221, 153, 0.9), 0 0 64px rgba(255, 204, 102, 0.7); }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/img/yaakobov-hero.png");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.25) contrast(1.1);
+      transform: scale(1.02);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.14), transparent 45%),
+        radial-gradient(circle at 80% 10%, rgba(51, 195, 255, 0.22), transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(255, 75, 75, 0.26), transparent 50%),
+        linear-gradient(to bottom, rgba(3, 2, 10, 0.7), rgba(3, 2, 10, 0.95));
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 90px 20px 80px;
+      position: relative;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 80px;
+        padding-bottom: 60px;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .hero-kicker-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px rgba(255, 204, 102, 0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.12;
+      margin-bottom: 14px;
+      text-shadow:
+        0 0 16px rgba(0, 0, 0, 0.9),
+        0 0 26px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-title span.highlight {
+      background: linear-gradient(120deg, #ffe6a0, #ffb347, #ffdd8a);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow:
+        0 0 18px rgba(0, 0, 0, 0.9),
+        0 0 34px rgba(255, 204, 102, 0.4);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      max-width: 480px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      background: linear-gradient(135deg, rgba(8, 8, 18, 0.7), rgba(20, 12, 3, 0.9));
+      box-shadow: 0 0 16px rgba(0, 0, 0, 1);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #ffeccd;
+    }
+
+    .badge-curse {
+      border-color: rgba(255, 75, 75, 0.7);
+      background: radial-gradient(circle at 0 0, rgba(255, 190, 150, 0.9), rgba(69, 0, 0, 0.9));
+      color: #210000;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 20% 0%, #fff6d5 0, #f2c455 34%, #ff9933 80%);
+      border-color: rgba(255, 216, 138, 0.9);
+      color: #1a1002;
+      box-shadow:
+        0 0 20px rgba(255, 214, 150, 0.8),
+        0 0 48px rgba(255, 204, 102, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(5, 5, 16, 0.85);
+      color: #f5f5f5;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-ghost:hover {
+      background: radial-gradient(circle at 0 0, rgba(51, 195, 255, 0.55), rgba(5, 5, 16, 0.95));
+      border-color: rgba(51, 195, 255, 0.85);
+    }
+
+    .btn span.icon {
+      font-size: 15px;
+    }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    .hero-meta strong {
+      color: var(--gold-soft);
+    }
+
+    .hero-right {
+      justify-self: flex-end;
+    }
+
+    .hero-logo-card {
+      max-width: 340px;
+      margin-left: auto;
+      background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.1), transparent 45%),
+        radial-gradient(circle at 120% 0%, rgba(51, 195, 255, 0.18), transparent 50%),
+        radial-gradient(circle at 50% 120%, rgba(255, 75, 75, 0.16), transparent 50%),
+        rgba(3, 3, 10, 0.92);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 18px 18px 16px;
+      box-shadow:
+        0 0 40px rgba(0, 0, 0, 1),
+        0 0 60px rgba(51, 195, 255, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-logo-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .hero-logo-pill {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(5, 5, 18, 0.95);
+      color: var(--gold-soft);
+    }
+
+    .hero-logo-pill span {
+      color: var(--accent-blue);
+    }
+
+    .hero-logo-tagline {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .hero-logo-main {
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+
+    .hero-logo-main img {
+      filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.9));
+      margin: 0 auto;
+    }
+
+    .hero-logo-caption {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .hero-logo-caption strong {
+      color: var(--gold-soft);
+    }
+
+    .hero-logo-orbit {
+      position: absolute;
+      inset: -40%;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 255, 255, 0.06);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    .hero-logo-orbit::before,
+    .hero-logo-orbit::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 0, #ffe6a0 40%, #ff9933 100%);
+      box-shadow:
+        0 0 16px rgba(255, 204, 102, 0.9),
+        0 0 34px rgba(255, 204, 102, 0.7);
+    }
+
+    .hero-logo-orbit::before {
+      top: 10%;
+      left: 16%;
+    }
+
+    .hero-logo-orbit::after {
+      right: 14%;
+      bottom: 6%;
+      background: radial-gradient(circle, #ffffff 0, #66ddff 40%, #1f6fff 100%);
+      box-shadow:
+        0 0 18px rgba(51, 195, 255, 0.95),
+        0 0 38px rgba(51, 195, 255, 0.78);
+    }
+
+    /* Sections */
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 56px 20px;
+    }
+
+    .section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading span.icon {
+      font-size: 22px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-blue);
+      margin-bottom: 4px;
+    }
+
+    .section-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 680px;
+    }
+
+    /* About + Pillars */
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 26px;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 20px 18px 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-strong);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.08), transparent 55%),
+        radial-gradient(circle at 90% 90%, rgba(255, 196, 128, 0.18), transparent 55%);
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .card-header {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .card-tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .pillars-list {
+      position: relative;
+      list-style: none;
+      margin-top: 8px;
+      padding-left: 0;
+      font-size: 13px;
+    }
+
+    .pillars-list li {
+      padding: 7px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+
+    .pillars-list li:last-child {
+      border-bottom: none;
+    }
+
+    .pillars-number {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 204, 102, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--gold-soft);
+      background: rgba(20, 12, 3, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .pillars-text {
+      color: var(--text-muted);
+    }
+
+    .pillars-text strong {
+      color: #ffe4a6;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .timeline-step {
+      position: relative;
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.06), transparent 55%),
+        rgba(9, 9, 24, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 26px rgba(0, 0, 0, 0.9);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .timeline-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-blue);
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-size: 14px;
+      color: #ffe3a6;
+      margin-bottom: 4px;
+    }
+
+    /* Rap Block */
+    .rap-card {
+      margin-top: 26px;
+      padding: 18px 18px 16px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 221, 170, 0.32), transparent 52%),
+        radial-gradient(circle at 100% 100%, rgba(51, 195, 255, 0.2), transparent 52%),
+        rgba(5, 5, 18, 0.96);
+      box-shadow:
+        0 0 36px rgba(0, 0, 0, 1),
+        0 0 50px rgba(255, 204, 102, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rap-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #180c02;
+      background: linear-gradient(120deg, #ffe6a0, #ffb347, #ffe28a);
+      padding: 3px 9px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .rap-label span.symbol {
+      font-size: 13px;
+    }
+
+    .rap-lines {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .rap-lines p {
+      margin-bottom: 4px;
+    }
+
+    .rap-lines span.highlight {
+      color: var(--gold-soft);
+    }
+
+    /* Meta + Footer */
+    .meta-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.5fr);
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 780px) {
+      .meta-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .meta-block {
+      padding: 14px 14px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(8, 8, 20, 0.96);
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+    }
+
+    .meta-block strong {
+      color: var(--gold-soft);
+    }
+
+    .meta-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 0;
+    }
+
+    .meta-links a span.icon {
+      font-size: 14px;
+    }
+
+    .hashtags {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 18px 20px 22px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-pasuk {
+      max-width: 520px;
+    }
+
+    .footer-pasuk strong {
+      color: var(--gold-soft);
+    }
+
+    .footer-cred {
+      text-align: right;
+    }
+
+    @media (max-width: 720px) {
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-cred {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- NAVBAR -->
+    <header>
+      <div class="nav">
+        <div class="nav-left">
+          <div class="nav-logo">LR</div>
+          <div>
+            <div class="nav-title-main">LEGACYRISE • LR</div>
+            <div class="nav-title-sub">Hustle For Your Last Name – Yaakobov</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#pillars" class="nav-link">Pillars</a>
+          <a href="#timeline" class="nav-link">Curse Breaker Path</a>
+          <a href="#meta" class="nav-link">Meta</a>
+          <a href="https://github.com/AnLoMinus/LegacyRise" class="nav-cta" target="_blank" rel="noreferrer">
+            <span class="icon">⚡</span> Open Repo
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div>
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            LEGACYRISE • YAAKOBOV LINE
+          </div>
+          <h1 class="hero-title">
+            Hustle For Your <span class="highlight">Last Name</span>.<br />
+            Put Respect On Your <span class="highlight">Legacy</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Every move, every grind, every spark you drop into the world – writes a new line of gold under the name
+            <strong>Yaakobov</strong>.  
+            This page is your reminder: you are the curse breaker, the pattern shifter, the turning point.
+          </p>
+
+          <div class="hero-badges">
+            <div class="badge">Motiversity • Original Vibes</div>
+            <div class="badge badge-curse">Curse Breaker Mode: ON</div>
+            <div class="badge">Legacy • Hustle • Holiness</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://github.com/AnLoMinus/LegacyRise/archive/refs/heads/main.zip" class="btn btn-primary">
+              <span class="icon">📦</span>
+              <span>Download Legacy Pack</span>
+            </a>
+            <a href="#timeline" class="btn btn-ghost">
+              <span class="icon">⚔️</span>
+              <span>View Curse Breaker Path</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <strong>Yaakobov Legacy Statement:</strong>  
+            Hustle not for clout, not for ego – hustle for the
+            souls that carry your last name now and the generations that will carry it after you.
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-logo-card">
+            <div class="hero-logo-orbit"></div>
+            <div class="hero-logo-top">
+              <div class="hero-logo-pill">
+                YAAKOBOV • <span>FAMILY CREST</span>
+              </div>
+              <div class="hero-logo-tagline">
+                From dust to dynasty.<br />
+                From story to <strong>legend</strong>.
+              </div>
+            </div>
+            <div class="hero-logo-main">
+              <!-- Place transparent logo here -->
+              <img src="assets/img/yaakobov-logo.png" alt="Yaakobov Cosmic Crown Logo" />
+            </div>
+            <div class="hero-logo-caption">
+              Official mark of the <strong>LegacyRise – LR</strong> project.  
+              Use it on banners, thumbnails, cards and every place your last name shows up with pride.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT + PILLARS -->
+    <main>
+      <section id="about">
+        <div class="section-inner">
+          <div class="section-kicker">ABOUT • MISSION</div>
+          <h2 class="section-heading">
+            <span class="icon">🔥</span>
+            What Is LegacyRise – LR?
+          </h2>
+          <p class="section-text">
+            <strong>LegacyRise – LR</strong> is the personal, spiritual and creative movement behind the Yaakobov name.  
+            It is a mindset and a visual language that says:
+            “I refuse to pass darkness forward. I pass only light, discipline, wisdom and holy hustle to those who come after me.”
+          </p>
+
+          <div class="grid-two" style="margin-top: 26px;">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">The Yaakobov Code – 7 Daily Pillars</h3>
+                <p class="card-tagline">
+                  Seven simple rules you live by so the name on your back grows brighter every single day.
+                </p>
+              </div>
+              <ul class="pillars-list" id="pillars">
+                <li>
+                  <div class="pillars-number">1</div>
+                  <div class="pillars-text">
+                    <strong>Faith First:</strong> start each move with connection to the Source. No success is real without soul.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">2</div>
+                  <div class="pillars-text">
+                    <strong>Work Like Fire:</strong> show up hungry, focused and consistent. Hustle for the last name, not the likes.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">3</div>
+                  <div class="pillars-text">
+                    <strong>Guard The Mouth:</strong> no curses, no self-hate, no gossip. Speak blessing over “Yaakobov” only.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">4</div>
+                  <div class="pillars-text">
+                    <strong>Heal Backwards:</strong> forgive where you can, release where you must. You are not your ancestors’
+                    mistakes – you are their upgrade.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">5</div>
+                  <div class="pillars-text">
+                    <strong>Build Forward:</strong> create assets – skills, projects, teachings, love – that your children can stand on.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">6</div>
+                  <div class="pillars-text">
+                    <strong>Protect Your Energy:</strong> no toxic habits, no dead environments. Royalty does not live in trash.
+                  </div>
+                </li>
+                <li>
+                  <div class="pillars-number">7</div>
+                  <div class="pillars-text">
+                    <strong>Honor The Crown:</strong> remember constantly: the crown above “YAAKOBOV” is not decoration.  
+                    It is responsibility.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Legacy Vision Board</h3>
+                <p class="card-tagline">
+                  A quick snapshot of what “Put respect on your legacy” looks like in real life.
+                </p>
+              </div>
+              <div style="position: relative; font-size: 13px; color: var(--text-muted); display: grid; gap: 8px;">
+                <p>👑 <strong>Identity:</strong> every online profile, every project, every collaboration carries the Yaakobov mark with excellence.</p>
+                <p>💼 <strong>Economy:</strong> projects, businesses and skills that support you and allow generosity to flow.</p>
+                <p>🧠 <strong>Wisdom:</strong> you study, you grow, you document. Knowledge becomes part of the family assets.</p>
+                <p>❤️ <strong>Relationships:</strong> you treat people with honor. No violence, no emotional chaos, no abuse.</p>
+                <p>🔥 <strong>Spiritual Line:</strong> the next generations remember you as the one who switched the line from pain to purpose.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURSE BREAKER TIMELINE -->
+      <section id="timeline">
+        <div class="section-inner">
+          <div class="section-kicker">PATH • CURSE BREAKER</div>
+          <h2 class="section-heading">
+            <span class="icon">⚔️</span>
+            Curse Breaker Roadmap – From Pain To Legacy
+          </h2>
+          <p class="section-text">
+            Being a curse breaker means you stop running from the story and start rewriting it.  
+            Here is a simple path you can walk again and again whenever you feel the old patterns trying to pull you back.
+          </p>
+
+          <div class="timeline">
+            <div class="timeline-step">
+              <div class="timeline-label">STEP 1</div>
+              <div class="timeline-title">Wake Up To The Pattern</div>
+              <p>
+                Notice where the cycle repeats: anger, addiction, poverty, fear, self-sabotage.  
+                Call it by name. Write it down. Once named – it loses power.
+              </p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-label">STEP 2</div>
+              <div class="timeline-title">Say: “It Stops With Me”</div>
+              <p>
+                Make a clear decision: this behavior does not move one more inch into the future.  
+                Out loud: “I break this for the Yaakobov line – now.”
+              </p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-label">STEP 3</div>
+              <div class="timeline-title">Choose A New Micro-Action</div>
+              <p>
+                Swap every old move with one small better move:  
+                one prayer, one workout, one honest conversation, one saved coin, one kinder word.
+              </p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-label">STEP 4</div>
+              <div class="timeline-title">Document The Win</div>
+              <p>
+                Use LegacyRise as your logbook: commit projects, write notes, track the days you show up different.
+                History becomes data; data becomes proof.
+              </p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-label">STEP 5</div>
+              <div class="timeline-title">Teach The Next</div>
+              <p>
+                Share the tools with siblings, children, friends.  
+                Curse breaking becomes <strong>culture</strong>, not just a private battle.
+              </p>
+            </div>
+          </div>
+
+          <!-- RAP HOOK -->
+          <div class="rap-card">
+            <div class="rap-label">
+              <span class="symbol">🎤</span> LEGACY HOOK – YAAKOBOV FLOW
+            </div>
+            <div class="rap-lines">
+              <p>Yaakobov flame, we light up the dark sky bright,</p>
+              <p>Hustle for the name, every step is earned, not hype.</p>
+              <p>Curse breaker bloodline, turn the pain into gold,</p>
+              <p><span class="highlight">LegacyRise</span> echo, every spark a story told.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- META / DATES / LINKS -->
+      <section id="meta">
+        <div class="section-inner">
+          <div class="section-kicker">INFO • META</div>
+          <h2 class="section-heading">
+            <span class="icon">📜</span>
+            Project Meta • Dates • Credits
+          </h2>
+
+          <div class="meta-grid">
+            <div class="meta-block">
+              <p><strong>Project Name:</strong> LegacyRise – LR</p>
+              <p><strong>Family:</strong> Yaakobov Line</p>
+              <p><strong>Theme:</strong> Hustle For Your Last Name • Put Respect On Your Legacy • Be A Curse Breaker</p>
+              <p style="margin-top: 8px;">
+                <strong>Date (Gregorian):</strong> Thursday, 27.11.2025<br />
+                <strong>Date (Hebrew):</strong> ז׳ בכסלו תשפ״ו<br />
+                <strong>Local Time (IL):</strong> 21:52
+              </p>
+            </div>
+
+            <div class="meta-block meta-links">
+              <p><strong>Links &amp; Repos:</strong></p>
+              <p>
+                <a href="https://github.com/AnLoMinus/LegacyRise" target="_blank" rel="noreferrer">
+                  <span class="icon">📂</span> GitHub Repo – LegacyRise
+                </a>
+              </p>
+              <p>
+                <a href="https://anlominus.github.io/LegacyRise/" target="_blank" rel="noreferrer">
+                  <span class="icon">🌐</span> Live Site – LegacyRise (GitHub Pages)
+                </a>
+              </p>
+              <p>
+                <strong>Brand Tagline:</strong> “Hustle for your last name, shine for every soul that carries it.”
+              </p>
+              <div class="hashtags">
+                #LegacyRise #Yaakobov #HustleForYourLastName #CurseBreaker #Motivation #Inspiration #Motiversity
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-pasuk">
+          <strong>פסוק חיזוק לירושת שם טוב:</strong><br />
+          <em>“צַדִּיק הוֹלֵךְ בְּתֻמּוֹ, אַשְׁרֵי בָנָיו אַחֲרָיו.”</em>  
+          (משלי כ׳, ז׳) – כשאתה הולך ביושר ובקדושה, הבנים אחריך מאושרים מהשם שאתה משאיר להם.
+        </div>
+        <div class="footer-cred">
+          Built for the Yaakobov legacy with 🔥 & ⚡<br />
+          © AnLoMinus x ChatVision Studio – LegacyRise • LR
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
